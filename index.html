@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 231 Course Home Page</title>
+    <meta name="description" content="WDD 231 | Course Home Page | Ryan Worsham">
+    <meta name="author" content="Ryan Worsham">
+    <link rel="stylesheet" href="styles/home.css">
+    <link rel="stylesheet" href="styles/home-large.css">
+    <script src="scripts/home.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>WDD 231 Course Home Page</h1>
+        <button id="menu" aria-label="menu"></button>
+        <nav class="navigation">
+            <a href="#" class="active">Home</a>
+            <a href="#" target="_blank">Chamber</a>
+            <a href="https://github.com/eworsham" target="_blank">GitHub Profile</a>
+            <a href="https://www.linkedin.com/in/ryan-worsham-a04a98188/" target="_blank">LinkedIn</a>
+        </nav>
+    </header>
+    <main>
+        <section class="course-work">
+            <h2>Course Work</h2>
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </section>
+        <section class="georgia-usa">
+            <h2>Georgia, USA</h2>
+            <figure>
+                <img src="images/georgia-state-flag.png" alt="Georgia State Flag">
+                <figcaption>Georgia, USA</figcaption>
+            </figure>
+        </section>
+        <section class="certificate">
+            <h2>Web and Computer Programming Certificate</h2>
+            <div class="filter-buttons">
+                <button id="allCourses" aria-label="allCourses">All</button>
+                <button id="cseCourses" aria-label="cseCourses">CSE</button>
+                <button id="wddCourses" aria-label="wddCourses">WDD</button>
+            </div>
+            <div id="courseSection"></div>
+            <p>Total Credits Required: <span id="totalCredits"></span></p>
+        </section>
+    </main>
+    <footer>
+        <p>©<span id="currentYear"></span> | Ryan Worsham | Georgia, USA</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>
