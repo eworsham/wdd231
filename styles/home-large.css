@@ -1,4 +1,8 @@
 @media (min-width: 640px) {
+    h1 {
+        text-align: center;
+    }
+
     #menu {
         display: none;
     }
