@@ -14,7 +14,7 @@ const lastModifiedSelector = document.querySelector('#lastModified');
 let today = new Date();
 
 currentYearSelector.textContent = today.getFullYear();
-lastModifiedSelector.textContent = document.lastModified;
+lastModifiedSelector.textContent = `Last Modified: ${document.lastModified}`;
 
 // Create Course Section and calculate total credits required
 const courseSectionSelector = document.querySelector('#courseSection');
