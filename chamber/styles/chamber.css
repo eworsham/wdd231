@@ -94,11 +94,11 @@ nav.open {
 }
 
 #menu::before {
-    content: "☰";
+    content: "\2630";
 }
 
 #menu.open::before {
-    content: "❌";
+    content: "X";
 }
 
 .menu-links {
