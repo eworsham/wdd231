@@ -1,0 +1,19 @@
+/* CSS styles for larger screens */
+@media (min-width: 38rem) {
+    #menu {
+        display: none;
+    }
+
+    #navigation {
+        display: block;
+    }
+
+    .menu-links {
+        display: flex;
+    }
+
+    .menu-links li {
+        flex: 1 1 100%;
+        text-align: center;
+    }
+}

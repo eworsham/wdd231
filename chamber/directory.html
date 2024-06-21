@@ -7,14 +7,14 @@
     <title>Canton Chamber of Commerce Directory Page</title>
     <meta name="description" content="Canton Chamber of Commerce Directory Page | WDD 231 | Ryan Worsham">
     <meta name="author" content="Ryan Worsham">
+    <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/chamber.css">
     <link rel="stylesheet" href="styles/chamber-large.css">
     <script src="scripts/chamber.js" defer></script>
     <link rel="icon" href="images/favicon.ico">
     <meta property="og:title" content="Canton Chamber of Commerce Directory Page">
     <meta property="og:type" content="website">
-    <!--  FIXME -->
-    <meta property="og:image" content="">
+    <meta property="og:image" content="https://eworsham.github.io/wdd231/chamber/images/favicon.ico">
     <meta property="og:url" content="https://eworsham.github.io/wdd231/chamber/directory.html">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,15 +24,17 @@
 <body>
     <header>
         <img src="images/logo.webp" alt="Canton Logo" width="100px" height="100px">
-        <h1>Canton GA</h1>
-        <p>Chamber of Commerce</p>
-        <button></button>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="directory.html">Directory</a></li>
-                <li><a href="join.html">Join</a></li>
-                <li><a href="discover.html">Discover</a></li>
+        <div>
+            <h1>Canton GA</h1>
+            <p>Chamber of Commerce</p>
+        </div>
+        <button id="menu"></button>
+        <nav id="navigation">
+            <ul class="menu-links">
+                <li id="home"><a href="index.html">Home</a></li>
+                <li id="directory" class="active"><a href="directory.html">Directory</a></li>
+                <li id="join"><a href="join.html">Join</a></li>
+                <li id="discover"><a href="discover.html">Discover</a></li>
             </ul>
         </nav>
     </header>
@@ -40,20 +42,24 @@
         <h2>Directory Page</h2>
     </main>
     <footer>
-        <p><strong>Canton GA Chamber of Commerce</strong></p>
-        <p>1123 Street</p>
-        <p>Canton, GA 30114</p>
-        <p>email@gmail.com</p>
-        <p>(404) 888-7531</p>
-        <div class="socials">
-            <a href="https://www.youtube.com/" target="_blank"><img src="" alt="YouTube logo"></a>
-            <a href="https://x.com/" target="_blank"><img src="" alt="Twitter logo"></a>
-            <a href="https://www.linkedin.com/" target="_blank"><img src="" alt="LinkedIn logo"></a>
+        <div>
+            <p><strong>Canton GA Chamber of Commerce</strong></p>
+            <p>90 North Street</p>
+            <p>Canton, GA 30114</p>
+            <p>info@cantoncc.org</p>
+            <p>(404) 888-7531</p>
         </div>
-        <p>WDD231 Class Project</p>
-        <p>Ryan Worsham</p>
-        <p>©<span id="currentYear"></span> Canton Chamber of Commerce</p>
-        <p id="lastModified"></p>
+        <div class="socials">
+            <a href="https://www.youtube.com/" target="_blank"><img src="images/youtube.webp" alt="YouTube logo"></a>
+            <a href="https://x.com/" target="_blank"><img src="images/twitter.webp" alt="Twitter logo"></a>
+            <a href="https://www.linkedin.com/" target="_blank"><img src="images/linkedin.webp" alt="LinkedIn logo"></a>
+        </div>
+        <div>
+            <p>WDD231 Class Project</p>
+            <p>Ryan Worsham</p>
+            <p>©<span id="currentYear"></span> Canton GA Chamber of Commerce</p>
+            <p id="lastModified"></p>
+        </div>
     </footer>
 </body>
 
