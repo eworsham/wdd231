@@ -4,8 +4,8 @@
         display: none;
     }
 
-    #navigation {
-        display: block;
+    nav {
+        grid-template-rows: 1fr;
     }
 
     .menu-links {

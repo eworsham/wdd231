@@ -15,9 +15,9 @@ lastModifiedSelector.textContent = `Last Modified: ${document.lastModified}`;
 
 // Navigation for mobile view
 const menuButtonSelector = document.querySelector('#menu');
-const navigationSelector = document.querySelector('#navigation');
+const animatedMenuSelector = document.querySelector('#animatedMenu');
 
 menuButtonSelector.addEventListener('click', () => {
     menuButtonSelector.classList.toggle('open');
-    navigationSelector.classList.toggle('open');
+    animatedMenuSelector.classList.toggle('open');
 });

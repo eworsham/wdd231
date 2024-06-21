@@ -49,7 +49,7 @@ body {
 header {
     background-color: var(--primary-color);
     display: grid;
-    grid-template-columns: 100px 1fr 75px;
+    grid-template-columns: 100px 1fr;
 }
 
 header img {
@@ -67,10 +67,30 @@ header p
     padding: 0;
 }
 
+nav {
+    grid-column: 1/3;
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.5s ease-out;
+}
+
+nav ul {
+    overflow: hidden;
+}
+
+nav.open {
+    grid-template-rows: 1fr;
+}
+
 #menu {
     background-color: var(--primary-color);
     border: none;
     font-size: 2rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100px;
+    width: 100px;
 }
 
 #menu::before {
@@ -79,15 +99,6 @@ header p
 
 #menu.open::before {
     content: "❌";
-}
-
-#navigation {
-    display: none;
-    grid-column: 1/4;
-}
-
-#navigation.open {
-    display: block;
 }
 
 .menu-links {
