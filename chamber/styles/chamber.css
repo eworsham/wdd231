@@ -91,6 +91,8 @@ nav.open {
     right: 0;
     height: 100px;
     width: 100px;
+    padding: .5rem;
+    color: var(--secondary-color);
 }
 
 #menu::before {
@@ -127,7 +129,24 @@ nav.open {
 *
 ****************************************************/
 
+footer {
+    background-color: var(--primary-color);
+    padding: .5rem;
+}
 
+footer p {
+    margin: .3rem;
+}
+
+.socials {
+    display: flex;
+    justify-content: space-evenly;
+    padding: .5rem;
+}
+
+.socials a {
+    color: var(--secondary-color);
+}
 
 /**************************************************** 
 *

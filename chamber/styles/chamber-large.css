@@ -1,5 +1,6 @@
 /* CSS styles for larger screens */
 @media (min-width: 38rem) {
+    /* Header */
     #menu {
         display: none;
     }
@@ -15,5 +16,16 @@
     .menu-links li {
         flex: 1 1 100%;
         text-align: center;
+    }
+
+    /* Footer */
+    footer {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        padding: 2rem;
+    }
+
+    footer div {
+        margin: auto 0;
     }
 }
