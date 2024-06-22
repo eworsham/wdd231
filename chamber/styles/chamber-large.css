@@ -20,12 +20,16 @@
 
     /* Footer */
     footer {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        padding: 2rem;
+        display: flex;   
+        justify-content: space-evenly;
     }
 
     footer div {
         margin: auto 0;
+    }
+
+    .socials {
+        width: 300px;
+        /* width: 100%; */
     }
 }
