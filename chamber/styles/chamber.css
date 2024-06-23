@@ -166,22 +166,73 @@ footer p {
 
 /****************************************************
 *
-*           Rules for Discover page only
-*
-****************************************************/
-
-
-
-/****************************************************
-*
 *           Rules for Directory page only
 *
 ****************************************************/
+.directory {
+    display: grid;
+    text-align: center;
+}
 
+.filter-button {
+    padding: 1rem;
+    border: 1px solid rgba(0, 0, 0, .3);
+    border-radius: .5rem;
+    background-color: var(--accent-color);
+    margin: .3rem .5rem;
+}
 
+.filter-button:hover {
+    background-color: var(--primary-color)
+}
+
+.card {
+    display: grid;
+    border: 1px solid rgba(0, 0, 0, .3);
+    border-radius: .5rem;
+    background-color: #eee;
+    padding: 1rem;
+    margin: .5rem;
+}
+
+.card h3 {
+    grid-column: 1/3;
+}
+
+.card img {
+    grid-column: 1/3;
+    margin: 1rem auto;
+}
+
+.address p {
+    margin: .3rem 0;
+}
+
+.list {
+    display: flex;
+    background-color: #eee;
+    border: 1px solid rgba(0, 0, 0, .3);
+    border-radius: .5rem;
+    padding: .5rem;
+    margin: .5rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.list div p {
+    margin: .3rem 0;
+}
 
 /****************************************************
 *
 *           Rules for Join page only
+*
+****************************************************/
+
+
+
+/****************************************************
+*
+*           Rules for Discover page only
 *
 ****************************************************/

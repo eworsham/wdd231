@@ -1,5 +1,5 @@
 /* CSS styles for larger screens */
-@media (min-width: 38rem) {
+@media (min-width: 960px) {
     /* Header */
     #menu {
         display: none;
@@ -30,6 +30,11 @@
 
     .socials {
         width: 300px;
-        /* width: 100%; */
+    }
+
+    /* Rules for Directory Page only */
+    .companies-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
     }
 }
