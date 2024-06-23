@@ -24,72 +24,72 @@
             "phoneNumber": "(700) 704-0755",
             "website": "cantonga.gov",
             "image": "images/canton-theatre.webp",
-            "membershipLevel": "2"
+            "membershipLevel": 2
         },
         {
-            "name": "",
+            "name": "Precision Homes",
             "address": {
-                "street": "",
-                "city": "",
-                "state": "",
-                "zip": ""
+                "street": "270 E Main St",
+                "city": "Canton",
+                "state": "GA",
+                "zip": "30114"
             },
-            "phoneNumber": "",
-            "website": "",
-            "image": "",
-            "membershipLevel": ""
+            "phoneNumber": "(700) 720-2052",
+            "website": "precisionhomes.com",
+            "image": "images/precision-homes.webp",
+            "membershipLevel": 3
         },
         {
-            "name": "",
+            "name": "Downtown Kitchen",
             "address": {
-                "street": "",
-                "city": "",
-                "state": "",
-                "zip": ""
+                "street": "140 E Marietta St",
+                "city": "Canton",
+                "state": "GA",
+                "zip": "30114"
             },
-            "phoneNumber": "",
-            "website": "",
-            "image": "",
-            "membershipLevel": ""
+            "phoneNumber": "(770) 479-1616",
+            "website": "downtownkitchen.com",
+            "image": "images/downtown-kitchen.webp",
+            "membershipLevel": 2
         },
         {
-            "name": "",
+            "name": "Goin' Coastal",
             "address": {
-                "street": "",
-                "city": "",
-                "state": "",
-                "zip": ""
+                "street": "125 W Main St",
+                "city": "Canton",
+                "state": "GA",
+                "zip": "30114"
             },
-            "phoneNumber": "",
-            "website": "",
-            "image": "",
-            "membershipLevel": ""
+            "phoneNumber": "(770) 479-3737",
+            "website": "goincoastal.com",
+            "image": "images/goin-coastal.webp",
+            "membershipLevel": 3
         },
         {
-            "name": "",
+            "name": "Price Law Group",
             "address": {
-                "street": "",
-                "city": "",
-                "state": "",
-                "zip": ""
+                "street": "301 E Main St",
+                "city": "Canton",
+                "state": "GA",
+                "zip": "30114"
             },
-            "phoneNumber": "",
-            "website": "",
-            "image": "",
-            "membershipLevel": ""
+            "phoneNumber": "(770 479-1471",
+            "website": "pricelaw.com",
+            "image": "images/price-law.webp",
+            "membershipLevel": 1
         },
         {
-            "name": "",
+            "name": "Yonder Agency",
             "address": {
-                "street": "",
-                "city": "",
-                "state": "",
-                "zip": ""
+                "street": "360 E Main St",
+                "city": "Canton",
+                "state": "GA",
+                "zip": "30114"
             },
-            "phoneNumber": "",
-            "website": "",
-            "image": "",
-            "membershipLevel": ""
+            "phoneNumber": "(404) 725-1803",
+            "website": "yonderagency.com",
+            "image": "images/yonder-agency.webp",
+            "membershipLevel": 2
         }
     ]
 }
