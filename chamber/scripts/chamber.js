@@ -21,3 +21,38 @@ menuButtonSelector.addEventListener('click', () => {
     menuButtonSelector.classList.toggle('open');
     animatedMenuSelector.classList.toggle('open');
 });
+
+/**************************************************** 
+*
+*           Home Page only
+*
+****************************************************/
+
+
+
+/**************************************************** 
+*
+*           Directory Page only
+*
+****************************************************/
+
+// Fetch company data
+const url = 'https://eworsham.github.io/wdd231/chamber/data/members.json'
+
+async function getCompanyCards(url) {
+
+}
+
+/**************************************************** 
+*
+*           Join Page only
+*
+****************************************************/
+
+
+
+/**************************************************** 
+*
+*           Discover Page only
+*
+****************************************************/

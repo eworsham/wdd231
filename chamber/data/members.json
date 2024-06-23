@@ -1,0 +1,95 @@
+{
+    "companies": [
+        {
+            "name": "Bizarre Coffee",
+            "address": {
+                "street": "121 E Marietta St",
+                "city": "Canton",
+                "state": "GA",
+                "zip": 30114
+            },
+            "phoneNumber": "(470) 863-9800",
+            "website": "bizarrecoffee.com",
+            "image": "images/bizarre-coffee.webp",
+            "membershipLevel": 1
+        },
+        {
+            "name": "",
+            "address": {
+                "street": "",
+                "city": "",
+                "state": "",
+                "zip": ""
+            },
+            "phoneNumber": "",
+            "website": "",
+            "image": "",
+            "membershipLevel": ""
+        },
+        {
+            "name": "",
+            "address": {
+                "street": "",
+                "city": "",
+                "state": "",
+                "zip": ""
+            },
+            "phoneNumber": "",
+            "website": "",
+            "image": "",
+            "membershipLevel": ""
+        },
+        {
+            "name": "",
+            "address": {
+                "street": "",
+                "city": "",
+                "state": "",
+                "zip": ""
+            },
+            "phoneNumber": "",
+            "website": "",
+            "image": "",
+            "membershipLevel": ""
+        },
+        {
+            "name": "",
+            "address": {
+                "street": "",
+                "city": "",
+                "state": "",
+                "zip": ""
+            },
+            "phoneNumber": "",
+            "website": "",
+            "image": "",
+            "membershipLevel": ""
+        },
+        {
+            "name": "",
+            "address": {
+                "street": "",
+                "city": "",
+                "state": "",
+                "zip": ""
+            },
+            "phoneNumber": "",
+            "website": "",
+            "image": "",
+            "membershipLevel": ""
+        },
+        {
+            "name": "",
+            "address": {
+                "street": "",
+                "city": "",
+                "state": "",
+                "zip": ""
+            },
+            "phoneNumber": "",
+            "website": "",
+            "image": "",
+            "membershipLevel": ""
+        }
+    ]
+}
