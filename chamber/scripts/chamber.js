@@ -155,8 +155,7 @@ listViewSelector.addEventListener('click', () => {
     getCompanyList(url);
 });
 
-// getCompanyCards(url);
-getCompanyList(url);
+getCompanyCards(url);
 
 /**************************************************** 
 *
