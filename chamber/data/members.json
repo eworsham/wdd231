@@ -14,17 +14,17 @@
             "membershipLevel": 1
         },
         {
-            "name": "",
+            "name": "Canton Theatre",
             "address": {
-                "street": "",
-                "city": "",
-                "state": "",
-                "zip": ""
+                "street": "171 E Main St",
+                "city": "Canton",
+                "state": "GA",
+                "zip": "30114"
             },
-            "phoneNumber": "",
-            "website": "",
-            "image": "",
-            "membershipLevel": ""
+            "phoneNumber": "(700) 704-0755",
+            "website": "cantonga.gov",
+            "image": "images/canton-theatre.webp",
+            "membershipLevel": "2"
         },
         {
             "name": "",
