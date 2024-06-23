@@ -109,7 +109,6 @@ const displayCompanyList = companies => {
         const card = document.createElement('div');
         card.setAttribute('class', 'list');
         const name = document.createElement('h3');
-        const image = document.createElement('img');
         const address = document.createElement('div');
         address.setAttribute('class', 'address');
         const address1 = document.createElement('p');
@@ -117,19 +116,10 @@ const displayCompanyList = companies => {
         const info =document.createElement('div');
         const phoneNumber = document.createElement('p');
         const website = document.createElement('p');
-        const membershipLevel = document.createElement('p');
-
-        image.setAttribute('src', company.image);
-        image.setAttribute('alt', `${company.name} image`);
-        image.setAttribute('loading', 'lazy');
-        image.setAttribute('width', '100');
-        image.setAttribute('height', '75');
-        card.appendChild(image);
 
         name.textContent = company.name;
         card.appendChild(name);
         
-
         address1.textContent = company.address.street;
         address.appendChild(address1)
         address2.textContent = `${company.address.city}, ${company.address.state} ${company.address.zip}`;
