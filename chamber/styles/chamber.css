@@ -158,6 +158,22 @@ footer p {
     text-align: center;
 }
 
+.home-card {
+    background-color: #eee;
+    border: 1px solid rgba(0, 0, 0, .3);
+    border-radius: .5rem;
+    margin: .5rem;
+}
+
+.home-card h3 {
+    background-color: var(--accent-color);
+    padding: 1rem;
+    margin: 0;
+    border-top-left-radius: .5rem;
+    border-top-right-radius: .5rem;
+    border: 1px solid rgba(0, 0, 0, .3);
+}
+
 /****************************************************
 *
 *           Rules for Home page only

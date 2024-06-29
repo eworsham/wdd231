@@ -31,14 +31,26 @@ menuButtonSelector.addEventListener('click', () => {
 // Selectors
 const homeSelector = document.querySelector('.home');
 
-// Url for company data
-const url = 'https://eworsham.github.io/wdd231/chamber/data/members.json';
+// Display current weather and forecast
+const currentWeatherUrl = 'https://api.openweathermap.org/data/2.5/weather?lat=34.23&lon=-84.48&appid=7bf9a045a7e358e0909cb880c445a24d&units=imperial';
 
+async function getCurrentWeather(url) {
+    const response = await fetch(url);
+    const data = await response.json();
+    console.log(data); //REMOVE ME
+}
 
+if (homeSelector) {
+    getCurrentWeather(currentWeatherUrl); //FIXME
+}
 
 // Display business info
 const businessesSelector = document.querySelector('#businesses');
-getCompanyCards(url, businessesSelector, true);
+const url = 'https://eworsham.github.io/wdd231/chamber/data/members.json';
+
+if (homeSelector) {
+    getCompanyCards(url, businessesSelector, true);
+}
 
 /**************************************************** 
 *
@@ -61,7 +73,6 @@ async function getCompanyCards(url, selector, silverOrGold = false) {
         
         for (let i = 0; i < 3; i++) {
             let randomIndex = Math.floor(Math.random() * dataFiltered.length);
-            console.log(randomIndex);
             dataFiltered.splice(randomIndex, 1);
         }
         displayCompanyCards(dataFiltered, selector);
