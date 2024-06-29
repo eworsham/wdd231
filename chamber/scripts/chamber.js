@@ -28,7 +28,17 @@ menuButtonSelector.addEventListener('click', () => {
 *
 ****************************************************/
 
+// Selectors
+const homeSelector = document.querySelector('.home');
 
+// Url for company data
+const url = 'https://eworsham.github.io/wdd231/chamber/data/members.json';
+
+
+
+// Display business info
+const businessesSelector = document.querySelector('#businesses');
+getCompanyCards(url, businessesSelector, true);
 
 /**************************************************** 
 *
@@ -37,16 +47,27 @@ menuButtonSelector.addEventListener('click', () => {
 ****************************************************/
 
 // Fetch company data
-const url = 'https://eworsham.github.io/wdd231/chamber/data/members.json';
+const directorySelector = document.querySelector('.directory');
 const companiesSelector = document.querySelector('#companies');
 const cardViewSelector = document.querySelector('#cardView');
 const listViewSelector = document.querySelector('#listView');
 
-async function getCompanyCards(url) {
+async function getCompanyCards(url, selector, silverOrGold = false) {
     const response = await fetch(url);
     const data = await response.json();
     
-    displayCompanyCards(data.companies);
+    if (silverOrGold) {
+        const dataFiltered = data.companies.filter(company => company.membershipLevel > 1);
+        
+        for (let i = 0; i < 3; i++) {
+            let randomIndex = Math.floor(Math.random() * dataFiltered.length);
+            console.log(randomIndex);
+            dataFiltered.splice(randomIndex, 1);
+        }
+        displayCompanyCards(dataFiltered, selector);
+    } else {
+        displayCompanyCards(data.companies, selector);
+    }
 }
 
 async function getCompanyList(url) {
@@ -56,8 +77,8 @@ async function getCompanyList(url) {
     displayCompanyList(data.companies);
 }
 
-const displayCompanyCards = companies => {
-    companiesSelector.textContent = "";
+const displayCompanyCards = (companies, selector) => {
+    selector.textContent = "";
 
     companies.forEach(company => {
         const card = document.createElement('div');
@@ -97,9 +118,9 @@ const displayCompanyCards = companies => {
         membershipLevel.textContent = `Membership Level: ${company.membershipLevel}`;
         card.appendChild(membershipLevel);
 
-        companiesSelector.appendChild(card);
+        selector.appendChild(card);
     });
-    companiesSelector.setAttribute('class', 'companies-grid');
+    selector.setAttribute('class', 'companies-grid');
 }
 
 const displayCompanyList = companies => {
@@ -137,15 +158,17 @@ const displayCompanyList = companies => {
     companiesSelector.removeAttribute('class', 'companies-grid');
 }
 
-cardViewSelector.addEventListener('click', () => {
-    getCompanyCards(url);
-});
+if (directorySelector) {
+    cardViewSelector.addEventListener('click', () => {
+        getCompanyCards(url, companiesSelector);
+    });
 
-listViewSelector.addEventListener('click', () => {
-    getCompanyList(url);
-});
+    listViewSelector.addEventListener('click', () => {
+        getCompanyList(url);
+    });
 
-getCompanyCards(url);
+    getCompanyCards(url, companiesSelector);
+}
 
 /**************************************************** 
 *
