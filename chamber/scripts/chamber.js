@@ -46,8 +46,7 @@ async function getCurrentWeather(url) {
 async function getWeatherForecast(url) {
     const response = await fetch(url);
     const data = await response.json();
-    console.log(data) //REMOVE ME
-    displayWeatherForecast(data);
+    displayWeatherForecast(data.list);
 }
 
 const displayCurrentWeather = data => {
@@ -65,7 +64,7 @@ const displayCurrentWeather = data => {
     img.setAttribute('alt', `${data.weather[0].main} icon`);
     currentWeatherSelector.appendChild(img);
 
-    temp.innerHTML = `<strong>${data.main.temp}<span>&#176;</span></strong> F`;
+    temp.innerHTML = `<strong>${data.main.temp}<span>&#176;</span> F</strong>`;
     info.appendChild(temp);
 
     desc.textContent = data.weather[0].description;
@@ -98,7 +97,32 @@ const displayWeatherForecast = data => {
     const day1 = document.createElement('p');
     const day2 = document.createElement('p');
 
+    console.log(data); //REMOVE ME
+    const dayNames = [
+        'Sunday',
+        'Monday',
+        'Tuesday',
+        'Wednesday',
+        'Thursday',
+        'Friday',
+        'Saturday'
+    ]
+    
+    const day0Value = 0;
+    const day1Value = 8;
+    const day2Value = 16;
 
+    const day0Date = new Date(data[day0Value].dt_txt);
+    const day0Index = day0Date.getDay();
+    day0.innerHTML = `${dayNames[day0Index]}: <strong>${data[day0Value].main.temp}<span>&#176;</span> F</strong>`;
+
+    const day1Date = new Date(data[day1Value].dt_txt);
+    const day1Index = day1Date.getDay();
+    day1.innerHTML = `${dayNames[day1Index]}: <strong>${data[day1Value].main.temp}<span>&#176;</span> F</strong>`;
+
+    const day2Date = new Date(data[day2Value].dt_txt);
+    const day2Index = day2Date.getDay();
+    day2.innerHTML = `${dayNames[day2Index]}: <strong>${data[day2Value].main.temp}<span>&#176;</span> F</strong>`;
 
     weatherForecastSelector.appendChild(day0);
     weatherForecastSelector.appendChild(day1);
