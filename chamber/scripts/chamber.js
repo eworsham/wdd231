@@ -32,16 +32,75 @@ menuButtonSelector.addEventListener('click', () => {
 const homeSelector = document.querySelector('.home');
 
 // Display current weather and forecast
+const currentWeatherSelector = document.querySelector('#currentWeather');
+const weatherForecastSelector = document.querySelector('#weatherForecast');
 const currentWeatherUrl = 'https://api.openweathermap.org/data/2.5/weather?lat=34.23&lon=-84.48&appid=7bf9a045a7e358e0909cb880c445a24d&units=imperial';
+const weatherForecastUrl = 'https://api.openweathermap.org/data/2.5/forecast?lat=34.23&lon=-84.48&appid=7bf9a045a7e358e0909cb880c445a24d&units=imperial&cnt=24';
 
 async function getCurrentWeather(url) {
     const response = await fetch(url);
     const data = await response.json();
     console.log(data); //REMOVE ME
+    displayCurrentWeather(data);
+}
+
+async function getWeatherForecast(url) {
+    const response = await fetch(url);
+    const data = await response.json();
+    console.log(data) //REMOVE ME
+    displayWeatherForecast(data);
+}
+
+const displayCurrentWeather = data => {
+    const img = document.createElement('img');
+    const info = document.createElement('div');
+    const temp = document.createElement('p');
+    const desc = document.createElement('p');
+    const tempHigh = document.createElement('p');
+    const tempLow = document.createElement('p');
+    const humidity = document.createElement('p');
+    const sunrise = document.createElement('p');
+    const sunset = document.createElement('p');
+
+    img.setAttribute('src', `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`);
+    img.setAttribute('alt', `${data.weather[0].main} icon`);
+    currentWeatherSelector.appendChild(img);
+
+    temp.innerHTML = `<strong>${data.main.temp}<span>&#176;</span></strong> F`;
+    info.appendChild(temp);
+
+    desc.textContent = data.weather[0].description;
+    info.appendChild(desc);
+
+    tempHigh.innerHTML = `High: ${data.main.temp_max}<span>&#176;</span> F`;
+    info.appendChild(tempHigh);
+
+    tempLow.innerHTML = `Low: ${data.main.temp_min}<span>&#176;</span> F`
+    info.appendChild(tempLow);
+
+    humidity.textContent = `Humidity: ${data.main.humidity}%`
+    info.appendChild(humidity);
+
+    const timeSunrise = new Date(data.sys.sunrise);
+    let sunriseFormatted = timeSunrise.toLocaleTimeString();
+    sunrise.textContent = `Sunrise: ${sunriseFormatted}`;
+    info.appendChild(sunrise);
+
+    const timeSunset = new Date(data.sys.sunset);
+    let sunsetFormatted = timeSunset.toLocaleTimeString();
+    sunset.textContent = `Sunset: ${sunsetFormatted}`;
+    info.appendChild(sunset);
+
+    currentWeatherSelector.appendChild(info);
+}
+
+const displayWeatherForecast = data => {
+
 }
 
 if (homeSelector) {
-    getCurrentWeather(currentWeatherUrl); //FIXME
+    getCurrentWeather(currentWeatherUrl);
+    getWeatherForecast(weatherForecastUrl);
 }
 
 // Display business info
