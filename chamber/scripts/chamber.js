@@ -35,12 +35,11 @@ const homeSelector = document.querySelector('.home');
 const currentWeatherSelector = document.querySelector('#currentWeather');
 const weatherForecastSelector = document.querySelector('#weatherForecast');
 const currentWeatherUrl = 'https://api.openweathermap.org/data/2.5/weather?lat=34.23&lon=-84.48&appid=7bf9a045a7e358e0909cb880c445a24d&units=imperial';
-const weatherForecastUrl = 'https://api.openweathermap.org/data/2.5/forecast?lat=34.23&lon=-84.48&appid=7bf9a045a7e358e0909cb880c445a24d&units=imperial&cnt=24';
+const weatherForecastUrl = 'https://api.openweathermap.org/data/2.5/forecast?lat=34.23&lon=-84.48&appid=7bf9a045a7e358e0909cb880c445a24d&units=imperial';
 
 async function getCurrentWeather(url) {
     const response = await fetch(url);
     const data = await response.json();
-    console.log(data); //REMOVE ME
     displayCurrentWeather(data);
 }
 
@@ -95,7 +94,15 @@ const displayCurrentWeather = data => {
 }
 
 const displayWeatherForecast = data => {
+    const day0 = document.createElement('p');
+    const day1 = document.createElement('p');
+    const day2 = document.createElement('p');
 
+
+
+    weatherForecastSelector.appendChild(day0);
+    weatherForecastSelector.appendChild(day1);
+    weatherForecastSelector.appendChild(day2);
 }
 
 if (homeSelector) {
