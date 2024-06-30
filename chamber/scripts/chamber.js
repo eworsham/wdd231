@@ -97,7 +97,6 @@ const displayWeatherForecast = data => {
     const day1 = document.createElement('p');
     const day2 = document.createElement('p');
 
-    console.log(data); //REMOVE ME
     const dayNames = [
         'Sunday',
         'Monday',

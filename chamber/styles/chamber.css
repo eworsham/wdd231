@@ -165,11 +165,12 @@ footer p {
 .hero a {
     display: block;
     padding: 1rem;
-    margin: .5rem;
+    margin: .5rem auto;
     background-color: var(--primary-color);
     border: 1px solid rgba(0, 0, 0, .3);
     border-radius: .5rem;
     color: var(--secondary-color);
+    width: 80%;
 }
 
 .hero a:hover {

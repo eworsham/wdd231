@@ -32,6 +32,12 @@
         width: 300px;
     }
 
+    /* Rules for Home Page only */
+    .home-cards {
+        display: grid;
+        grid-template-columns: 2fr 1.5fr 1fr;
+    }
+
     /* Rules for Directory Page only */
     .companies-grid {
         display: grid;
