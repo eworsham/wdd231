@@ -118,6 +118,10 @@ function createCourseList(courseArray) {
             courseCard.setAttribute('class', 'completed');
         }
 
+        courseCard.addEventListener('click', () => {
+            displayCourseDetails(course);
+        });
+
         courseSectionSelector.appendChild(courseCard);
     });
 }
@@ -142,3 +146,24 @@ wddCoursesSelector.addEventListener('click', () => {
 totalCreditsSelector.textContent = courses.reduce((accumulator, course) => {
     return accumulator + course.credits;
 }, 0);
+
+// Display Modal
+const courseDetails = document.querySelector('#courseDetails');
+
+function displayCourseDetails(course) {
+    courseDetails.innerHTML = `
+        <button id="closeModal">X</button>
+        <h2>${course.subject} ${course.number}</h2>
+        <h3>${course.title}</h3>
+        <p><strong>Credits</strong>: ${course.credits}</p>
+        <p><strong>Certificate</strong>: ${course.certificate}</p>
+        <p>${course.description}</p>
+        <p><strong>Technologies</strong>: ${course.technology.join(', ')}</p>
+    `;
+
+    courseDetails.showModal();
+
+    document.querySelector('#closeModal').addEventListener('click', () => {
+        courseDetails.close();
+    });    
+}
