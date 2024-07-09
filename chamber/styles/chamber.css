@@ -148,12 +148,11 @@ footer p {
     color: var(--secondary-color);
 }
 
-/**************************************************** 
+/****************************************************
 *
-*           Rules for classes used on multiple pages
+*           Rules for Home page only
 *
 ****************************************************/
-
 .home {
     text-align: center;
 }
@@ -205,14 +204,6 @@ footer p {
     border-radius: .5rem;
     margin: 1rem auto;
 }
-
-/****************************************************
-*
-*           Rules for Home page only
-*
-****************************************************/
-
-
 
 /****************************************************
 *
@@ -278,8 +269,47 @@ footer p {
 *           Rules for Join page only
 *
 ****************************************************/
+.join h2 {
+    text-align: center;
+}
 
+form {
+    max-width: 700px;
+    margin: 0 auto;
+    display: grid;
+}
 
+form label {
+    display: grid;
+    grid-template-columns: 1fr 2.5fr;
+    padding: 1rem;
+    align-items: center;
+}
+
+input,
+textarea,
+select
+{
+    appearance: none;
+    padding: .75rem;
+    border: 1px solid rgba(0, 0, 0, .3);
+    border-radius: .5rem;
+    background-color: #eee;
+}
+
+button[type="submit"] {
+    padding: .75rem;
+    border: 1px solid rgba(0, 0, 0, .3);
+    border-radius: .5rem;
+    background-color: var(--accent-color);
+    width: 75%;
+    margin: 1rem auto;
+    font-weight: 700;
+}
+
+button[type="submit"]:hover {
+    background-color: var(--primary-color);
+}
 
 /****************************************************
 *
