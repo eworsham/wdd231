@@ -276,7 +276,12 @@ if (directorySelector) {
 *
 ****************************************************/
 
+const timestampSelector = document.querySelector('#timestamp');
 
+if (timestampSelector) {
+    const today = new Date();
+    timestampSelector.value = today.toLocaleString();
+}
 
 /**************************************************** 
 *
@@ -288,37 +293,34 @@ const urlData = window.location.href
 const thankyouSelector = document.querySelector('.thankyou');
 const thanksData = document.createElement('div');
 
-const infoArray = urlData.split('?')[1].split('&');
-console.log(infoArray)
-
-function show(cup) {
-    infoArray.forEach(element => {
-        if (element.startsWith(cup)) {
-            result = element.split('=')[1];
-            result = result.replace('%40', '@');
-            result = result.replace('+', ' ');
-        }
-    });
-    return result;
+if (thankyouSelector) {
+    const infoArray = urlData.split('?')[1].split('&');
+    
+    function show(cup) {
+        infoArray.forEach(element => {
+            if (element.startsWith(cup)) {
+                result = element.split('=')[1];
+                result = result.replaceAll('%40', '@');
+                result = result.replaceAll('+', ' ');
+                result = result.replaceAll('%2F', '/');
+                result = result.replaceAll('%2C', ',');
+                result = result.replaceAll('%3A', ':');
+            }
+        });
+        return result;
+    }
+    
+    thanksData.innerHTML = `
+        <p><span class="thankyou-label">First Name: </span>${show("firstName")}</p>
+        <p><span class="thankyou-label">Last Name: </span>${show("lastName")}</p>
+        <p><span class="thankyou-label">Email: </span>${show("email")}</p>
+        <p><span class="thankyou-label">Phone Number: </span>${show("phone")}</p>
+        <p><span class="thankyou-label">Business Name: </span>${show("business")}</p>
+        <p><span class="thankyou-label">Timestamp: </span>${show("timestamp")}</p>
+    `;
+    
+    thankyouSelector.appendChild(thanksData);
 }
-
-thanksData.innerHTML = `
-    <p><span class="thankyou-label">First Name: </span>${show("firstName")}</p>
-    <p><span class="thankyou-label">Last Name: </span>${show("lastName")}</p>
-    <p><span class="thankyou-label">Email: </span>${show("email")}</p>
-    <p><span class="thankyou-label">Phone Number: </span>${show("phone")}</p>
-    <p><span class="thankyou-label">Business Name: </span>${show("business")}</p>
-    <p><span class="thankyou-label">Timestamp: </span>${show("timestamp")}</p>
-`;
-
-thankyouSelector.appendChild(thanksData);
-
-// const firstName = document.createElement('p');
-// const lastName = document.createElement('p');
-// const email = document.createElement('p');
-// const phoneNumber = document.createElement('p');
-// const businessName = document.createElement('p');
-// const timestamp = document.createElement('p');
 
 
 /**************************************************** 
