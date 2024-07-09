@@ -311,6 +311,25 @@ button[type="submit"]:hover {
     background-color: var(--primary-color);
 }
 
+/**************************************************** 
+*
+*           Thank You Page only
+*
+****************************************************/
+.thankyou {
+    text-align: center;
+}
+
+.thankyou div {
+    padding: 1rem;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.thankyou-label {
+    font-weight: 700;
+}
+
 /****************************************************
 *
 *           Rules for Discover page only
