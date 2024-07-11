@@ -346,7 +346,16 @@ button[type="submit"]:hover {
     border-radius: .5rem;
     padding: 1rem;
     margin: .5rem;
-    /* min-width: 350px; */
+    animation: fadeInUp 1s;
+}
+
+@keyframes fadeInUp {
+    from {
+        transform: translateX(100px);
+    }
+    to {
+        transform: translateY(0);
+    }
 }
 
 /**************************************************** 
