@@ -43,4 +43,9 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
     }
+
+    /* Rules for Join Page only */
+    .membership-card {
+        min-width: 700px;
+    }
 }

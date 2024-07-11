@@ -285,13 +285,51 @@ if (timestampSelector) {
     timestampSelector.value = today.toLocaleString();
 
     membershipInfoBtnSelector.addEventListener('click', () => {
-
+        displayMembershipInfo();
     });
 }
 
 function displayMembershipInfo() {
     membershipInfoSelector.innerHTML = `
-    
+        <button id="closeModal">X</button>
+        <div class="membership-card">
+            <h3>NP Membership</h3>
+            <p>Benefits</p>
+            <ul>
+                <li>No Fees</li>
+                <li>Networking Gatherings</li>
+            </ul>
+            <p>Price: $0</p>
+        </div>
+        <div class="membership-card">
+            <h3>Bronze Membership</h3>
+            <p>Benefits</p>
+            <ul>
+                <li>Event Discounts</li>
+                <li>Trainings</li>
+            </ul>
+            <p>Price: $25.99</p>
+        </div>
+        <div class="membership-card">
+            <h3>Silver Membership</h3>
+            <p>Benefits</p>
+            <ul>
+                <li>All Bronze benefits</li>
+                <li>Personalized Trainings</li>
+                <li>Priority Event Seating</li>
+            </ul>
+            <p>Price: $35.99</p>
+        </div>
+        <div class="membership-card">
+            <h3>Gold Membership</h3>
+            <p>Benefits</p>
+            <ul>
+                <li>All Silver benefits</li>
+                <li>Priority Advertising</li>
+                <li>VIP Event Access</li>
+            </ul>
+            <p>Price: $45.99</p>
+        </div>
     `;
 
     membershipInfoSelector.showModal();

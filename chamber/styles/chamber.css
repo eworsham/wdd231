@@ -311,6 +311,44 @@ button[type="submit"]:hover {
     background-color: var(--primary-color);
 }
 
+#membershipInfoBtn {
+    background-color: var(--accent-color);
+    border: 1px solid rgba(0, 0, 0, .3);
+    border-radius: .5rem;
+    padding: 1rem;
+    width: 60%;
+    margin: 0 auto;
+}
+
+#membershipInfoBtn:hover {
+    background-color: var(--primary-color);
+}
+
+#membershipInfo {
+    min-width: 350px;
+}
+
+::backdrop {
+    background-color: rgba(0, 0, 0, .5);
+}
+
+#closeModal {
+    width: 44px;
+    height: 44px;
+    border: 1px solid rgba(0, 0, 0, .3);
+    border-radius: .5rem;
+    background-color: var(--accent-color);
+    font-weight: 700;
+}
+
+.membership-card {
+    border: 1px solid rgba(0, 0, 0, .3);
+    border-radius: .5rem;
+    padding: 1rem;
+    margin: .5rem;
+    /* min-width: 350px; */
+}
+
 /**************************************************** 
 *
 *           Thank You Page only
