@@ -277,10 +277,28 @@ if (directorySelector) {
 ****************************************************/
 
 const timestampSelector = document.querySelector('#timestamp');
+const membershipInfoBtnSelector = document.querySelector('#membershipInfoBtn');
+const membershipInfoSelector = document.querySelector('#membershipInfo');
 
 if (timestampSelector) {
     const today = new Date();
     timestampSelector.value = today.toLocaleString();
+
+    membershipInfoBtnSelector.addEventListener('click', () => {
+
+    });
+}
+
+function displayMembershipInfo() {
+    membershipInfoSelector.innerHTML = `
+    
+    `;
+
+    membershipInfoSelector.showModal();
+
+    document.querySelector('#closeModal').addEventListener('click', () => {
+        membershipInfoSelector.close();
+    });
 }
 
 /**************************************************** 
