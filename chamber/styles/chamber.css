@@ -349,6 +349,22 @@ button[type="submit"]:hover {
     animation: slideIn 1s ease-in-out;
 }
 
+#npCard {
+    animation-delay: 0.2s;
+}
+
+#bronzeCard {
+    animation-delay: 0.4s;
+}
+
+#silverCard {
+    animation-delay: 0.6s;
+}
+
+#goldCard {
+    animation-delay: 0.8s;
+}
+
 @keyframes slideIn {
     from {
         opacity: 0;

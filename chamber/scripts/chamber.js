@@ -292,7 +292,7 @@ if (timestampSelector) {
 function displayMembershipInfo() {
     membershipInfoSelector.innerHTML = `
         <button id="closeModal">X</button>
-        <div class="membership-card">
+        <div class="membership-card" id="npCard">
             <h3>NP Membership</h3>
             <p>Benefits</p>
             <ul>
@@ -301,7 +301,7 @@ function displayMembershipInfo() {
             </ul>
             <p>Price: $0</p>
         </div>
-        <div class="membership-card">
+        <div class="membership-card" id="bronzeCard">
             <h3>Bronze Membership</h3>
             <p>Benefits</p>
             <ul>
@@ -310,7 +310,7 @@ function displayMembershipInfo() {
             </ul>
             <p>Price: $25.99</p>
         </div>
-        <div class="membership-card">
+        <div class="membership-card" id="silverCard">
             <h3>Silver Membership</h3>
             <p>Benefits</p>
             <ul>
@@ -320,7 +320,7 @@ function displayMembershipInfo() {
             </ul>
             <p>Price: $35.99</p>
         </div>
-        <div class="membership-card">
+        <div class="membership-card" id="goldCard">
             <h3>Gold Membership</h3>
             <p>Benefits</p>
             <ul>
