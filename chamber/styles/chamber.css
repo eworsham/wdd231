@@ -346,14 +346,19 @@ button[type="submit"]:hover {
     border-radius: .5rem;
     padding: 1rem;
     margin: .5rem;
-    animation: slideIn 1s;
+    animation: slideIn 1s ease-in-out;
 }
 
 @keyframes slideIn {
     from {
-        transform: translateX(100px);
+        opacity: 0;
+        transform: translateX(800px);
+    }
+    75% {
+        transform: translateX(-100px);
     }
     to {
+        opacity: 1;
         transform: translateY(0);
     }
 }
