@@ -403,3 +403,21 @@ button[type="submit"]:hover {
 *           Rules for Discover page only
 *
 ****************************************************/
+.discover h2 {
+    text-align: center;
+}
+
+.side-bar div {
+    border: 1px solid rgba(0, 0, 0, .3);
+    border-radius: .5rem;
+    margin: 1rem;
+    padding: 1rem;
+}
+
+.side-bar h3 {
+    text-align: center;
+}
+
+.label {
+    font-weight: 600;
+}
