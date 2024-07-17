@@ -384,3 +384,13 @@ if (thankyouSelector) {
 *           Discover Page only
 *
 ****************************************************/
+const welcomeMessage = document.querySelector('#welcomeMessage');
+const lastVisited = localStorage.getItem('lastVisited') || today.toLocaleDateString();
+
+if (welcomeMessage) {
+    if (lastVisited == today.toLocaleDateString()) {
+        welcomeMessage.textContent = `Welcome! Let us know if you have any questions.`;
+    } 
+
+    localStorage.setItem('lastVisited', today.toLocaleDateString());
+}

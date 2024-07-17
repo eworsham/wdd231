@@ -449,3 +449,7 @@ figure img {
     width: 100%;
     border-radius: .5rem;
 }
+
+figcaption {
+    padding: .5rem;
+}
