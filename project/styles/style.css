@@ -63,8 +63,7 @@ body {
 
 header {
     display: grid;
-    grid-template-columns: 100px 1fr;
-    gap: 1rem;
+    grid-template-columns: 100px 1fr 25px;
     background-color: var(--primary-color);
     color: var(--accent-color);
     padding: 1rem;
@@ -98,11 +97,10 @@ nav.open {
     border: none;
     font-size: 2rem;
     position: absolute;
-    top: 15px;
-    right: 0;
-    height: 100px;
-    width: 100px;
-    padding: .5rem;
+    top: 45px;
+    right: 10px;
+    height: 50;
+    width: 50;
     color: var(--accent-color);
 }
 
