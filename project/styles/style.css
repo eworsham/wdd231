@@ -41,6 +41,11 @@ a {
     text-decoration: none;
 }
 
+img {
+    width: 100%;
+    height: auto;
+}
+
 /**************************************************** 
 *
 *           Content Defaults
@@ -48,7 +53,6 @@ a {
 ****************************************************/
 
 body {
-    max-width: 960px;
     margin: 0 auto;
     font-family: var(--paragraph-font);
     color: var(--secondary-color);
@@ -125,7 +129,7 @@ nav.open {
     color: var(--accent-color);
     display: block;
     padding: 1rem;
-    font-weight: 700;
+    font-weight: 800;
     font-size: 1.2rem;
 }
 
