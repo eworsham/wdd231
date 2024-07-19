@@ -1,0 +1,28 @@
+/**************************************************** 
+*
+*           Style for Pages Larger than 960px
+*
+****************************************************/
+@media (min-width: 960px) {
+    /**************************************************** 
+    *
+    *           Header Area
+    *
+    ****************************************************/
+    #menu {
+        display: none;
+    }
+
+    nav {
+        grid-template-rows: 1fr;
+    }
+
+    .menu-links {
+        display: flex;
+    }
+
+    .menu-links li {
+        flex: 1 1 100%;
+        text-align: center;
+    }
+}
