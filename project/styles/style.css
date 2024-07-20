@@ -180,3 +180,14 @@ footer {
     width: 90%;
     margin: 1rem auto;
 }
+
+/**************************************************** 
+*
+*           News and Events Page only
+*
+****************************************************/
+
+.event {
+    background-color: #eee;
+    margin: 1rem;
+}
