@@ -28,13 +28,14 @@ menuButtonSelector.addEventListener('click', () => {
 *
 ****************************************************/
 const newsAndEventsSelector = document.querySelector('.news-and-events');
+const eventInfoSelector = document.querySelector('#eventInfo');
 
 function createLocalEventCard(events) {
     const localEventsSelector = document.querySelector('#localEvents');
 
     events.forEach(event => {
-        const name = event.name;
         const eventInfo = {
+            "name": event.name,
             "venue": event.location,
             "date": event.date,
             "priceRange": `$${event.fee}`
@@ -43,7 +44,7 @@ function createLocalEventCard(events) {
         const newEvent = document.createElement('div');
         newEvent.setAttribute('class', 'event-card rounded-border');
         newEvent.innerHTML = `
-            <h3>${name}</h3>
+            <h3>${eventInfo.name}</h3>
             <p>Click for more details</p>
         `;
 
@@ -59,8 +60,8 @@ function createAtlantaEventCard(events) {
     const atlantaEventsSelector = document.querySelector('#atlantaEvents');
 
     events.forEach(event => {
-        const name = event.name;
         const eventInfo = {
+            "name": event.name,
             "venue": event._embedded.venues[0].name,
             "date": event.dates.start.localDate,
             "priceRange": `$${event.priceRanges[0].min}-$${event.priceRanges[0].max}`
@@ -69,7 +70,7 @@ function createAtlantaEventCard(events) {
         const newEvent = document.createElement('div');
         newEvent.setAttribute('class', 'event-card rounded-border');
         newEvent.innerHTML = `
-            <h3>${name}</h3>
+            <h3>${eventInfo.name}</h3>
             <p>Click for more details</p>
         `;
 
@@ -82,7 +83,19 @@ function createAtlantaEventCard(events) {
 }
 
 function displayEventInfo(eventInfo) {
-    console.log(eventInfo); //FIXME
+    eventInfoSelector.innerHTML = `
+        <button id="closeModal">X</button>
+        <h4>${eventInfo.name}</h4>
+        <p><strong>Venue:</strong> ${eventInfo.venue}</p>
+        <p><strong>Date:</strong> ${eventInfo.date}</p>
+        <p><strong>Fee:</strong> ${eventInfo.priceRange}</p>
+    `;
+
+    eventInfoSelector.showModal();
+
+    document.querySelector('#closeModal').addEventListener('click', () => {
+        eventInfoSelector.close();
+    });
 }
 
 async function fetchLocalEventData(url) {
