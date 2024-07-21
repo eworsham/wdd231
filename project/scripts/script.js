@@ -122,3 +122,36 @@ if (newsAndEventsSelector) {
     const atlantaUrl = 'https://app.ticketmaster.com/discovery/v2/events.json?size=3&city=Atlanta&apikey=SYT8UN9ZN1ayqnA94BwPsxEFcwA0veU1'
     fetchAtlantaEventData(atlantaUrl);
 }
+
+/**************************************************** 
+*
+*           Thank You page
+*
+****************************************************/
+
+const urlData = window.location.href;
+const thankYouSelector = document.querySelector('#thankYou')
+const thanksData = document.createElement('div');
+
+if (thankYouSelector) {
+    const infoArray = urlData.split('?')[1].split('&');
+
+    function show(field) {
+        infoArray.forEach(element => {
+            if (element.startsWith(field)) {
+                result = element.split('=')[1];
+                result = result.replaceAll('%40', '@');
+                result = result.replaceAll('+', ' ');
+            }
+        });
+        return result
+    }
+
+    thanksData.innerHTML = `
+        <p><span class="thank-you-label">First Name: </span>${show("firstName")}</p>
+        <p><span class="thank-you-label">Last Name: </span>${show("lastName")}</p>
+        <p><span class="thank-you-label">Email: </span>${show("email")}</p>
+    `;
+
+    thankYouSelector.appendChild(thanksData);
+}

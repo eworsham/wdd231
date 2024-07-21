@@ -18,7 +18,7 @@
     <meta property="og:url" content="https://eworsham.github.io/wdd231/project/request-info.html">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -36,15 +36,15 @@
             </ul>
         </nav>
     </header>
-    <main>
+    <main class="request-info">
         <h1>Request Info Page</h1>
         <form action="thank-you.html" method="get">
-            <label>First Name <input type="text" name="firstName" title="firstName" autocomplete="given-name"></label>
-            <label>Last Name <input type="text" name="lastName" title="Last Name" autocomplete="family-name"></label>
-            <label>Email * <input type="email" name="email" title="Email" autocomplete="email" placeholder="example@gmail.com" required></label>
-            <label>Phone Number <input type="tel" name="phone" title="Phone Number" autocomplete="tel"></label>
-            <label>Questions <textarea name="questions" title="Questions" id="questions"></textarea></label>
-            <button type="submit">Request Info About Great Sky</button>
+            <label>First Name * <input type="text" name="firstName" title="firstName" autocomplete="given-name" required class="rounded-border"></label>
+            <label>Last Name * <input type="text" name="lastName" title="Last Name" autocomplete="family-name" required class="rounded-border"></label>
+            <label>Email * <input type="email" name="email" title="Email" autocomplete="email" placeholder="example@gmail.com" required class="rounded-border"></label>
+            <label>Phone Number <input type="tel" name="phone" title="Phone Number" autocomplete="tel" class="rounded-border"></label>
+            <label>Questions <textarea name="questions" title="Questions" id="questions" class="rounded-border"></textarea></label>
+            <button type="submit" class="rounded-border" id="requestInfoButton">Request Info About Great Sky</button>
         </form>
     </main>
     <footer>
