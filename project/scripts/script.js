@@ -122,13 +122,36 @@ async function fetchAtlantaEventData(url) {
 
 if (newsAndEventsSelector) {
     // Create and display local event cards
-    const localUrl = 'https://eworsham.github.io/wdd231/project/data/events.json'; //FIXME
+    const localUrl = 'https://eworsham.github.io/wdd231/project/data/events.json';
     fetchLocalEventData(localUrl);
     
     
     // Create and display Atlanta event cards
     const atlantaUrl = 'https://app.ticketmaster.com/discovery/v2/events.json?size=3&city=Atlanta&apikey=SYT8UN9ZN1ayqnA94BwPsxEFcwA0veU1'
     fetchAtlantaEventData(atlantaUrl);
+}
+
+/**************************************************** 
+*
+*           Request Info page
+*
+****************************************************/
+
+const formMessage = document.querySelector('#formMessage');
+const requestInfoButton = document.querySelector('#requestInfoButton');
+
+if (formMessage) {
+    let formPreviouslySubmitted = localStorage.getItem('formPreviouslySubmitted');
+
+    if (formPreviouslySubmitted) {
+        formMessage.innerHTML = `Welcome back ${localStorage.getItem('firstName')}! You have previously requested info. Call (404) 998-4322 instead of resubmitting this form for priority care.`
+    } else {
+        formMessage.innerHTML = 'Welcome! Submit the form with all the required info and a representative will contact you.'
+    }
+
+    requestInfoButton.addEventListener('click', () => {
+        localStorage.setItem('formPreviouslySubmitted', 'true');
+    });
 }
 
 /**************************************************** 
@@ -162,4 +185,5 @@ if (thankYouSelector) {
     `;
 
     thankYouSelector.appendChild(thanksData);
+    localStorage.setItem('firstName', show("firstName"));
 }

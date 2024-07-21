@@ -105,8 +105,8 @@ nav.open {
     position: absolute;
     top: 45px;
     right: 10px;
-    height: 50;
-    width: 50;
+    height: 50px;
+    width: 50px;
     color: var(--accent-color);
 }
 
@@ -258,6 +258,13 @@ button[type="submit"]
 label {
     font-weight: 600;
     font-size: 1.1rem;
+}
+
+#formMessage {
+    padding: 1rem;
+    background-color: rgb(250, 213, 213);
+    font-weight: 500;
+    text-align: center;
 }
 
 /**************************************************** 
