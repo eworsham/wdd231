@@ -35,4 +35,25 @@
     .location {
         grid-template-columns: 1fr 2fr;
     }
+
+    /**************************************************** 
+    *
+    *           Home Page only
+    *
+    ****************************************************/
+
+    .news,
+    #localEvents,
+    #atlantaEvents
+    {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .news h2, 
+    #localEvents h2,
+    #atlantaEvents h2
+    {
+        grid-column: 1/3;
+    }
 }

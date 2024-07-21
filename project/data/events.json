@@ -1,13 +1,94 @@
 {
     "localEvents": [
         {
-            "name": "",
-            "dateTime": "",
-            "location": "",
+            "name": "River Rock Music Festival featuring Bryce Leatherwood",
+            "date": "July 26, 2024",
+            "location": "Etowah River Park, 600 Brown Industrial Pkwy",
             "fee": 0
         },
         {
-
+            "name": "Endless SummerFest",
+            "date": "July 20, 2024",
+            "location": "The Mill on Etowah, 225 Reformation Parkway",
+            "fee": 0
+        },
+        {
+            "name": "Birdhouse Workshop",
+            "date": "July 20, 2024",
+            "location": "1836 Hickory Flat Hwy",
+            "fee": 0
+        },
+        {
+            "name": "Bastille Day Celebration",
+            "date": "July 20, 2024",
+            "location": "361 E Main St",
+            "fee": 0
+        },
+        {
+            "name": "GlowBand - Heroes of Southern Rock Show",
+            "date": "July 20, 2024",
+            "location": "Canton Theatre, 171 E Main St",
+            "fee": 0
+        },
+        {
+            "name": "Loose Shoes at Canton Ice House",
+            "date": "July 21, 2024",
+            "location": "Canton Ice House",
+            "fee": 0
+        },
+        {
+            "name": "Paint & Sip",
+            "date": "July 21, 2024",
+            "location": "Suds & Bottles",
+            "fee": 0
+        },
+        {
+            "name": "Land Navigation Essentials",
+            "date": "July 20, 2024",
+            "location": "SARCRAFT LLC",
+            "fee": 0
+        },
+        {
+            "name": "First Fridays",
+            "date": "August 2, 2024",
+            "location": "Downtown Canton",
+            "fee": 0
+        },
+        {
+            "name": "Canton Farmers Market",
+            "date": "July 27, 2024",
+            "location": "Canton Farmers Market, Downtown Canton",
+            "fee": 0
+        },
+        {
+            "name": "Back to School Giveaway",
+            "date": "July 22, 2024",
+            "location": "New Life Church",
+            "fee": 0
+        },
+        {
+            "name": "Live Music at Canton Theatre",
+            "date": "July 28, 2024",
+            "location": "Canton Theatre, 171 E Main St",
+            "fee": 0
+        },
+        {
+            "name": "Outdoor Movie Night",
+            "date": "July 29, 2024",
+            "location": "Heritage Park",
+            "fee": 0
+        },
+        {
+            "name": "Yoga in the Park",
+            "date": "July 30, 2024",
+            "location": "Boling Park",
+            "fee": 0
+        },
+        {
+            "name": "Art Walk",
+            "date": "July 31, 2024",
+            "location": "Downtown Canton",
+            "fee": 0
         }
     ]
 }
