@@ -99,17 +99,25 @@ function displayEventInfo(eventInfo) {
 }
 
 async function fetchLocalEventData(url) {
-    const response = await fetch(url);
-    const data = await response.json();
-    const events = data.localEvents;
-    createLocalEventCard(events);
+    try {
+        const response = await fetch(url);
+        const data = await response.json();
+        const events = data.localEvents;
+        createLocalEventCard(events);
+    } catch (e) {
+        console.error(e);
+    }
 }
 
 async function fetchAtlantaEventData(url) {
-    const response = await fetch(url);
-    const data = await response.json();
-    const events = data._embedded.events;
-    createAtlantaEventCard(events);
+    try {
+        const response = await fetch(url);
+        const data = await response.json();
+        const events = data._embedded.events;
+        createAtlantaEventCard(events);
+    } catch (e) {
+        console.error(e);
+    }
 }
 
 if (newsAndEventsSelector) {
